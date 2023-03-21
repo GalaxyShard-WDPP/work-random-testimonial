@@ -1,6 +1,6 @@
 
 let quotes = [];
-fetch("/snippets/press-quotes.txt").then(response => response.text()).then(response => {
+fetch("snippets/press-quotes.txt").then(response => response.text()).then(response => {
     // response contains a list of quotes surrounded by ' and seperated by commas & new lines
     // this cuts off the quotes, commas, and new lines and converts it into an array
     quotes = response.split("\n").map(x=>x.slice(1, x.length - 2));
